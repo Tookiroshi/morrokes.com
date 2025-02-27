@@ -1,3 +1,18 @@
+// Function to hide the "Rarity" column
+function hideRarityColumn() {
+    const table = document.getElementById('data-table');
+    const rows = table.rows;
+
+    // Loop through each row
+    for (let i = 0; i < rows.length; i++) {
+        // Hide the 2nd column (Rarity)
+        rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
+    }
+}
+
+// Call the function after the data is loaded
+document.addEventListener('DOMContentLoaded', hideRarityColumn);
+
 /* ==================================================================== */
 /* URLs
 ======================================================================= */
@@ -743,3 +758,4 @@ const frontPage = (options) => {
 /* Softload pages
 ======================================================================= */
 $(window).on('pageshow',function(){loadPage()});
+
