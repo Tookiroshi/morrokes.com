@@ -14,11 +14,37 @@
 .clock {
   font-size: 24px; /* Smaller font size */
   padding: 10px;
-  border: 2px solid #98cfff;
+  border: 2px solid #18883f;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   background-image: none;
   
+}
+/* Default light mode styles */
+:root {
+  --background-color: #ffffff; /* Light mode background */
+  --text-color: #000000; /* Light mode text */
+}
+
+/* Dark mode styles */
+body .dark-mode {
+  --background-color: #333333; /* Dark mode background */
+  --text-color: #ffffff; /* Dark mode text */
+}
+
+/* Apply the background and text color */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Optional: Style the button for better visibility */
+#themeToggle {
+  position: fixed; /* Make it fixed to the top right */
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it appears above other content */
 }
 body {
 
@@ -37,13 +63,13 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color:                    #8FB7D4;
+  --cd-primary-color:                    #18883f;
   --cd-primary-text-color:               #fff;
 
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color:                  #939799;
+  --cd-secondary-color:                  #08612a;
   --cd-secondary-text-color:             #fff;
 
   /* ============================================================= */
@@ -73,7 +99,7 @@ body {
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color:          #222222;
+  --cd-navbar-background-color:          #324a35;
   --cd-navbar-brand-color:               var(--cd-primary-color);
   --cd-navbar-brand-color-hover:         var(--cd-secondary-color);
   --cd-navbar-text-color:                var(--cd-content-background-color);
@@ -127,7 +153,7 @@ body {
   /* Link
   ================================================================ */
 
-  --cd-link-text-color:                  #4c8ebd;
+  --cd-link-text-color:                  #28a72e;
   --cd-link-text-color-hover:            var(--cd-secondary-color);
 
 
@@ -236,6 +262,12 @@ body {
   background-position: center;
   background-size: cover;
 
+}
+body {
+  background-image: url('../images/d2elxxl-b7a028ed-585e-4415-bcf8-02c35c631274.png');
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 

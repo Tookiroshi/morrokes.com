@@ -1,46 +1,3 @@
-function updateClock() {
-    const now = new Date();
-
-    // Get the current date and time in English format for local Spanish time
-    const options = { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: 'numeric', 
-        minute: 'numeric', 
-        second: 'numeric', 
-        timeZone: 'Europe/Madrid', // Set to local Spanish time
-        timeZoneName: 'short' // Optional: to show the time zone abbreviation
-    };
-    
-    const dateTime = now.toLocaleString('en-GB', options); // Specify 'en-GB' for English
-
-    // Update the clock element
-    const clockElement = document.getElementById('clock');
-    clockElement.textContent = dateTime;
-}
-
-// Update the clock immediately and then every second
-updateClock();
-setInterval(updateClock, 1000);
-
-// Update the clock immediately and then every second
-updateClock();
-setInterval(updateClock, 1000);
-// Function to hide the "Rarity" column
-function hideRarityColumn() {
-    const table = document.getElementById('data-table');
-    const rows = table.rows;
-
-    // Loop through each row
-    for (let i = 0; i < rows.length; i++) {
-        // Hide the 2nd column (Rarity)
-        rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
-    }
-}
-
-// Call the function after the data is loaded
-document.addEventListener('DOMContentLoaded', hideRarityColumn);
 
 /* ==================================================================== */
 /* URLs
@@ -788,3 +745,69 @@ const frontPage = (options) => {
 ======================================================================= */
 $(window).on('pageshow',function(){loadPage()});
 
+// 
+
+
+function updateClock() {
+    const now = new Date();
+
+    // Get the current date and time in English format for local Spanish time
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric', 
+        timeZone: 'Europe/Madrid', // Set to local Spanish time
+        timeZoneName: 'short' // Optional: to show the time zone abbreviation
+    };
+    
+    const dateTime = now.toLocaleString('en-GB', options); // Specify 'en-GB' for English
+
+    // Update the clock element
+    const clockElement = document.getElementById('clock');
+    clockElement.textContent = dateTime;
+}
+
+
+// Update the clock immediately and then every second
+updateClock();
+setInterval(updateClock, 1000);
+
+// Function to hide the "Rarity" column
+function hideRarityColumn() {
+    const table = document.getElementById('data-table');
+    const rows = table.rows;
+
+    // Loop through each row
+    for (let i = 0; i < rows.length; i++) {
+        // Hide the 2nd column (Rarity)
+        rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
+    }
+}
+
+// Call the function after the data is loaded
+document.addEventListener('DOMContentLoaded', hideRarityColumn);
+
+// Get the toggle button and body element
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Check for saved theme preference in local storage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    body.classList.add(currentTheme);
+}
+
+// Add event listener to the toggle button
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Save user preference in local storage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        localStorage.removeItem('theme');
+    }
+});
