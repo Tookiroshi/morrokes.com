@@ -69,7 +69,19 @@
                 </li>
             </ul>
         </div>
-        <button id="themeToggle">Dark Mode</button>
+
+            <input type="checkbox" id="darkmode-toggle"/>
+            <label for="darkmode-toggle"></label>
+
+            <script>
+                // JavaScript to toggle dark mode
+                const toggle = document.getElementById('darkmode-toggle');
+                const body = document.body;
+        
+                toggle.addEventListener('change', () => {
+                    body.classList.toggle('dark-theme', toggle.checked);
+                });
+            </script>
          </nav>
     </div>
 </nav>

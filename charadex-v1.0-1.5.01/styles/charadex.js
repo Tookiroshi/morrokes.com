@@ -794,20 +794,21 @@ document.addEventListener('DOMContentLoaded', hideRarityColumn);
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
-// Check for saved theme preference in local storage
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    body.classList.add(currentTheme);
-}
 
-// Add event listener to the toggle button
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+// // Check for saved theme preference in local storage
+// const currentTheme = localStorage.getItem('theme');
+// if (currentTheme) {
+//     body.classList.add(currentTheme);
+// }
 
-    // Save user preference in local storage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark-mode');
-    } else {
-        localStorage.removeItem('theme');
-    }
-});
+// // Add event listener to the toggle button
+// themeToggle.addEventListener('click', () => {
+//     body.classList.toggle('dark-mode');
+
+//     // Save user preference in local storage
+//     if (body.classList.contains('dark-mode')) {
+//         localStorage.setItem('theme', 'dark-mode');
+//     } else {
+//         localStorage.removeItem('theme');
+//     }
+// });
