@@ -35,7 +35,8 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="../newbie.html">Newbie gide</a>
                         <a class="dropdown-item" href="../encyclopedia.html">Encyclopedia</a>
-                        <a class="dropdown-item" href="../world.html">World expanded</a>
+                        <a class="dropdown-item" href="../species.html">Main Species</a>
+                        <a class="dropdown-item" href="../species.html">Companions and Fauna</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Toyhou.se World</a>
                         <a class="dropdown-item" href="https://discord.gg/Qffy7QBecs">Discord</a>
@@ -76,10 +77,11 @@
             <script>
                 // JavaScript to toggle dark mode
                 const toggle = document.getElementById('darkmode-toggle');
-                const body = document.body;
+                const _body = document.body;
         
                 toggle.addEventListener('change', () => {
-                    body.classList.toggle('dark-theme', toggle.checked);
+                    console.log(toggle)
+                    _body.classList.toggle('dark-theme', toggle.checked);
                 });
             </script>
          </nav>

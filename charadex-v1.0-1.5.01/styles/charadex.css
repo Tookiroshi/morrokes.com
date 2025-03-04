@@ -22,26 +22,16 @@
 }
 
 /* darkmode */
-
 /* Default light mode styles */
 :root {
   --background-color: #ffffff; /* Light mode background */
   --text-color: #000000; /* Light mode text */
 }
 
-/* Dark theme styles */
-.darkmode-toggle {
-  background-image: url('../images/IMG_3483.webp'); /* Dark mode background */
+/* Dark mode styles */
+body.darkmode {
+  --background-color: #333333; /* Dark mode background */
   --text-color: #ffffff; /* Dark mode text */
-}
-
-/* Apply the background and text color */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  font-family: Arial, sans-serif;
-  padding: 20px;
 }
 
 /* Style for the toggle switch */
@@ -89,47 +79,6 @@ input:checked + label:after {
 label:active:after {
   width: 20px;
 }
-
-/* label{
-  width: 40px;
-  height: 20px;
-  position: relative;
-  display: block;
-  background-color: #f8f8f8;
-  border-radius: 200px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px .5px 15px rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: 0.3s;
-}
-label:after {
-  content: "";
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  background: linear-gradient(180deg, #ffcc89 #d8860b);
-  border-radius: 180px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-}
-input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-input:checked + label {
-background: #333333;
-}
-input:checked + label:after{
-  left: 38px;
-  transform: translateX(-100%);
-  background: linear-gradient(180deg, #777, #303030);
-}
-label:active:after{
-  width: 20px;
-} */
-
 
 /* end of tooki */
 
@@ -352,7 +301,7 @@ body {
 
 }
 body {
-  background-image: url('../images/day.png');
+  background-image: url('../images/testttto.jpeg');
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -768,7 +717,7 @@ p:last-child {
 
 .hero-title {
   position: relative; /* Required for positioning the pseudo-element */
-  color: var(--cd-primary-text-color);
+  color: #057430;
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   border-radius: var(--cd-border-radius);
@@ -782,13 +731,14 @@ p:last-child {
 }
 
 .hero-title::before {
-  content: ''; /* Required for pseudo-elements */
+
   position: absolute; /* Position it absolutely */
   top: 0; /* Align to the top */
   left: 0; /* Align to the left */
   right: 0; /* Stretch to the right */
   bottom: 0; /* Stretch to the bottom */
-  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.507); /* Black with 50% opacity */
+  content: url(../images/Captura.PNG); /* Required for pseudo-elements */
   z-index: 1; /* Ensure it is behind the text */
 }
 
@@ -797,7 +747,9 @@ p:last-child {
   z-index: 2; /* Ensure text is above the overlay */
 }
 
-.card-12{
+
+/* tooki edit */
+.card-12 {
   width: 100%;
   height: 300px;
   margin-top: 10px;
@@ -805,6 +757,7 @@ p:last-child {
   background-repeat: no-repeat; /* Prevent the image from repeating */
   align-items: end;
 }
+
 .about-species {
   display: flex;                /* Makes child elements align horizontally */
   align-items: center;         /* Centers items vertically in the flex container */
@@ -817,6 +770,7 @@ p:last-child {
 .species-description {
   max-width: 400px;            /* You can adjust the width as needed */
 }
+
 ul {
   list-style-type: none; /* Removes the dots */
   padding: 0; /* Removes padding */

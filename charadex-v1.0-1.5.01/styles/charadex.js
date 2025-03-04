@@ -790,25 +790,6 @@ function hideRarityColumn() {
 // Call the function after the data is loaded
 document.addEventListener('DOMContentLoaded', hideRarityColumn);
 
-// Get the toggle button and body element
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-
-
-// // Check for saved theme preference in local storage
-// const currentTheme = localStorage.getItem('theme');
-// if (currentTheme) {
-//     body.classList.add(currentTheme);
-// }
-
-// // Add event listener to the toggle button
-// themeToggle.addEventListener('click', () => {
-//     body.classList.toggle('dark-mode');
-
-//     // Save user preference in local storage
-//     if (body.classList.contains('dark-mode')) {
-//         localStorage.setItem('theme', 'dark-mode');
-//     } else {
-//         localStorage.removeItem('theme');
-//     }
-// });
+// // Get the toggle button and body element
+// const themeToggle = document.getElementById('themeToggle');
+// const body = document.body;
