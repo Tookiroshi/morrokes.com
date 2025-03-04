@@ -753,28 +753,28 @@ p:last-child {
   width: 100%;
   height: 300px;
   margin-top: 10px;
-  background-size: contain; /* Change to 'contain' to fit the image within the box */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  align-items: end;
+  object-fit: contain; /* Preserve aspect ratio */
 }
 
 .about-species {
   display: flex;                /* Makes child elements align horizontally */
   align-items: center;         /* Centers items vertically in the flex container */
+  gap: 20px;                  /* Adds space between the image and text */
 }
-
 .species-image {
   margin-right: 20px;          /* Add some space between the image and text */
 }
 
 .species-description {
-  max-width: 400px;            /* You can adjust the width as needed */
+  max-width: 400px;            /* Adjust the width as needed */
 }
 
 ul {
   list-style-type: none; /* Removes the dots */
   padding: 0; /* Removes padding */
 }
+
+
 @media (min-width: 768px) {
     .hero-title {
         letter-spacing: 2px;
