@@ -1,39 +1,14 @@
-
-.rarity {
-  display: none; /* Hides the rarity element */
-}
-
-.value {
-  display: none; /* Hides the value element */
-}
-
-.clock-container {
-  text-align: center;
-}
-
-.clock {
-  font-size: 24px; /* Smaller font size */
-  padding: 10px;
-  border: 2px solid #18883f;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: none;
-  
-}
-
 /* darkmode */
 /* Default light mode styles */
-:root {
-  --background-color: #ffffff; /* Light mode background */
-  --text-color: #000000; /* Light mode text */
-}
 
 /* Dark mode styles */
-body.darkmode {
+body, .checkbox, .dark-theme {
+  background-image: url('../images/nightto.jpeg');
+}
+.col-12, .col-md-6, .dark-theme {
   --background-color: #333333; /* Dark mode background */
   --text-color: #ffffff; /* Dark mode text */
 }
-
 /* Style for the toggle switch */
 label {
   width: 40px;
@@ -45,6 +20,7 @@ label {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px .5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
+  
 }
 
 label:after {
@@ -78,6 +54,29 @@ input:checked + label:after {
 
 label:active:after {
   width: 20px;
+  
+}
+/* end ---------------------- */
+.rarity {
+  display: none; /* Hides the rarity element */
+}
+
+.value {
+  display: none; /* Hides the value element */
+}
+
+.clock-container {
+  text-align: center;
+}
+
+.clock {
+  font-size: 24px; /* Smaller font size */
+  padding: 10px;
+  border: 2px solid #18883f;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: none;
+  
 }
 
 /* end of tooki */
@@ -717,7 +716,7 @@ p:last-child {
 
 .hero-title {
   position: relative; /* Required for positioning the pseudo-element */
-  color: #057430;
+  color: #d9d9d9;
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   border-radius: var(--cd-border-radius);

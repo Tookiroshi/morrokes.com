@@ -1,4 +1,5 @@
 
+
 /* ==================================================================== */
 /* URLs
 ======================================================================= */
@@ -778,13 +779,13 @@ setInterval(updateClock, 1000);
 // Function to hide the "Rarity" column
 function hideRarityColumn() {
     const table = document.getElementById('data-table');
-    const rows = table.rows;
+    // const rows = table.rows;
 
     // Loop through each row
-    for (let i = 0; i < rows.length; i++) {
-        // Hide the 2nd column (Rarity)
-        rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
-    }
+    // for (let i = 0; i < rows.length; i++) {
+    //     // Hide the 2nd column (Rarity)
+    //     rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
+    // }
 }
 
 // Call the function after the data is loaded
@@ -793,3 +794,32 @@ document.addEventListener('DOMContentLoaded', hideRarityColumn);
 // // Get the toggle button and body element
 // const themeToggle = document.getElementById('themeToggle');
 // const body = document.body;
+
+// dark mode
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+
+});
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+
+    // Save preference to localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+}
+// Check for saved user preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModePreference = localStorage.getItem('dark-mode');
+    if (darkModePreference === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+});
+const button = document.getElementById('yourButtonId');
+if (button) {
+    button.addEventListener('click', yourFunction);
+}
