@@ -4,11 +4,34 @@
 /* Dark mode styles */
 body, .checkbox, .dark-theme {
   background-image: url('../images/nightto.jpeg');
+  
 }
-.main-contaier, .checkbox,  .dark-theme {
+ .col-12, .checkbox,  .dark-theme {
   --background-color: #333333; /* Dark mode background */
   --text-color: #ffffff; /* Dark mode text */
 }
+/* Dark mode styles */
+.dark-theme, .checkbox, .col-12 {
+  --background-color: #333333 !important;
+  --text-color: #ffffff !important;
+  --container-bg: #444444 !important;
+}
+
+/* Apply the background and text color */
+body, .checkbox,  .dark-theme {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style the containers */
+.card, .checkbox .dark-theme {
+  background-color: var(--container-bg) !important;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 
 
 /* Style for the toggle switch */
@@ -773,8 +796,20 @@ p:last-child {
 ul {
   list-style-type: none; /* Removes the dots */
   padding: 0; /* Removes padding */
+  
+}
+.index-container {
+  display: flex; /* Enable Flexbox */
+  gap: 20px; /* Add space between the two columns */
 }
 
+/* Style each column */
+.index-column {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  flex: 1; /* Each column takes equal width */
+}
 
 @media (min-width: 768px) {
     .hero-title {
