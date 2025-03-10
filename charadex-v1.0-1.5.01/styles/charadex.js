@@ -795,31 +795,20 @@ document.addEventListener('DOMContentLoaded', hideRarityColumn);
 // const themeToggle = document.getElementById('themeToggle');
 // const body = document.body;
 
-// dark mode
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('dark-mode-toggle');
 
-});
-// Function to toggle dark mode
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
+// Check localStorage for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark-mode') {
+  enableDarkMode(); // Apply dark mode if it was previously enabled
+} else {
+  disableDarkMode(); // Apply light mode by default
+}
 
-    // Save preference to localStorage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-    } else {
-        localStorage.setItem('dark-mode', 'disabled');
-    }
-}
-// Check for saved user preference on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const darkModePreference = localStorage.getItem('dark-mode');
-    if (darkModePreference === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
+// Add event listener to the toggle button
+toggle.addEventListener('click', () => {
+  if (body.classList.contains('dark-mode')) {
+    disableDarkMode(); // Switch to light mode
+  } else {
+    enableDarkMode(); // Switch to dark mode
+  }
 });
-const button = document.getElementById('yourButtonId');
-if (button) {
-    button.addEventListener('click', yourFunction);
-}

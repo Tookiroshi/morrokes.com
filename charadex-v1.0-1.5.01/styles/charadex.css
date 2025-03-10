@@ -4,7 +4,9 @@
 /* Dark mode styles */
 body, .checkbox, .dark-theme {
   background-image: url('../images/nightto.jpeg');
-  
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
  .col-12, .checkbox,  .dark-theme {
   --background-color: #333333; /* Dark mode background */
@@ -31,6 +33,9 @@ body, .checkbox,  .dark-theme {
   border-radius: 10px;
   margin-bottom: 20px;
 }
+.dark-theme .card {
+  background-color: #1e2c20!important;}
+
 
 
 
@@ -322,6 +327,7 @@ body {
   background-image: var(--cd-body-background-image);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
 }
 body {
