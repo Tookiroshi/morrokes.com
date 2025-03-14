@@ -817,9 +817,49 @@ ul {
   flex: 1; /* Each column takes equal width */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .hero-title {
         letter-spacing: 2px;
         font-size: 2rem;
     }
+}
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+    height: auto; /* Adjust height to fit content */
+    margin-top: 10px;
+    object-fit: contain; /* Preserve aspect ratio */
+  }
+
+  .card img {
+    width: 50%; /* Ensure images fit within the card */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .card .card-body {
+    padding: 1rem; /* Adjust padding as needed */
+  }
+
+  .card .card-title {
+    font-size: 1.25rem; /* Adjust font size as needed */
+  }
+
+  .card .card-text {
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+}
+
+/* Define the class with the text */
+.responsive-text::after {
+  content: "Sorry! The phone verison is low key broken so I recommend you use the desktop version for the best experience :)"; /* Add the text */
+  display: none; /* Hide by default */
+  color: rgb(51, 148, 69); /* Style the text as needed */
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Use a media query to show the text on smaller screens */
+@media (max-width: 700px) {
+  .responsive-text::after {
+    display: block; /* Show the text */
+  }
 }
