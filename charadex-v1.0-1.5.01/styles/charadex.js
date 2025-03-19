@@ -812,3 +812,24 @@ toggle.addEventListener('click', () => {
     enableDarkMode(); // Switch to dark mode
   }
 });
+// Function to hide the "Rarity" and "Price" columns
+function hideColumns() {
+    const table = document.getElementById('data-table');
+    if (table) {
+        const rows = table.rows;
+
+        // Loop through each row
+        for (let i = 0; i < rows.length; i++) {
+            // Hide the 2nd column (Rarity) and 3rd column (Price)
+            if (rows[i].cells[1]) {
+                rows[i].cells[1].style.display = 'none'; // Hides the Rarity column
+            }
+            if (rows[i].cells[2]) {
+                rows[i].cells[2].style.display = 'none'; // Hides the Price column
+            }
+        }
+    }
+}
+
+// Call the function after the data is loaded
+document.addEventListener('DOMContentLoaded', hideColumns);
