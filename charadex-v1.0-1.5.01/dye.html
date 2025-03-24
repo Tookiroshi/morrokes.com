@@ -16,7 +16,7 @@
     <meta property="type" content="website" />
     <meta property="url" content="https://www.morrokes.com/" />
     <meta property="image" content="assets/meta.png" />
-    <meta name="description" content="Our masterlist!">
+    <meta name="description" content="This are the traits of the arpg!">
 
     <!-- No AI scraping directives -->
     <meta name="robots" content="noai">
@@ -55,6 +55,7 @@
     <!-- --------------------------------------------------------------------
     <-- Header
     <-------------------------------------------------------------------- -->
+    
     <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
@@ -75,10 +76,61 @@
 
             <!-- Filters
             ----------------------------------------------------------------- -->
-            <div class="card p-md-5 p-4 mb-4">
-
-                <h3 class="mb-0"><a href="masterlist.html">Species Masterlist</a></h3>
-
+            <div class="card p-md-5 p-4">
+                <h1 class="text-primary mb-3">Index</h1>
+                <ul>
+                    <li><a href="#dyefr"><h4>Dye fruit</h4></a></li>
+                    <li><a href="#dyeto"><h4>How To</h4></a></li>
+                </ul>
+            </div>
+    
+            <div class="card p-md-5 p-4">
+                <div class="pl-4">
+                    <h1 class="text-primary mb-3">Dye Fruit</h1>
+                    <div class="about-species">
+                        <img src="images/mutations/dye.webp" alt="Species Image" class="card-12"> 
+                        <div id="dyefr">
+                        <div class="species-description">
+                        </div> 
+                        <p>
+                    The dry fruit is a fruit that can be used to change the color of your character, found in almost any market around Vahonea, this fruit is popular amongst fashon trenders. Sweet and yummy and full of crunchy tinny seeds, learn more <a href="items.html?id=2">here</a>.
+                           </p>  
+                    </div>
+                    </div> 
+                      
+                </div>
+            </div>
+            <div class="card p-md-5 p-4">
+                <div class="pl-4">
+                    <h1 class="text-primary mb-3">How to use the dye Fruit</h1>
+                    <div class="about-species">
+                        <img src="images/wip.webp" alt="Species Image" class="card"> 
+                        <div id="dyeto">
+                        <div class="species-description">
+                        </div>
+                    <p>The dye fruit is quite easy to use, consume it, and change your colors as you desire!</p>
+                    <p>Ready to change yourself or your companion? Do so <a href="https://www.deviantart.com/comments/1/1173534964/5198310518">here</a>!</p>
+                    <div class="dropdown-divider"></div>
+                    <p class="text-muted">NOTE:Nails,hair,beard,eyes,makeup,frekles, are free to change whenever, no fruit needed</p>
+                    
+                    </div>
+                    </div> 
+                    <div class="about-species">
+                        <img src="images/wip.webp" alt="Species Image" class="card"> 
+                        <div id="#">
+                        <div class="species-description">
+                        </div>
+                        <h4 class="text-primary mb-3">Examples of dye consumption</h4>
+                    <p>Dye works in two ways, to change as much or as little of your coat's color as you'd like!</p>
+                    <p>Not to be confused with the <a href="traits.html">mutation fruit</a>!</p>
+                    <div class="dropdown-divider"></div>
+                    <p class="text-muted">NOTE:Nails,hair,beard,eyes,makeup,frekles, are free to change whenever, no fruit needed</p>
+                    
+                    </div>
+                    </div>
+            </div>
+            </div>
+           
                 <!-- Faux Folders
                 <-- Remove this if you'd like to make your own buttons instead!
                 ------------------------------------------------------------------- -->
@@ -120,15 +172,6 @@
                     </div>
                 </div>
 
-                <!-- Prev & Next Topbar -->
-                <div style="display: none;" id="prevNext">
-                    <hr class="mb-4">
-                    <div class="row no-gutters px-2 mb-n3 font-weight-bold text-uppercase">
-                        <div class="col-6 px-1"><a id="entryPrev" href=""><i class="fa fa-chevron-left mr-2"></i><span></span></a></div>
-                        <div class="col-6 px-1 text-right order-md-1"><a id="entryNext" href=""><span></span><i class="fa fa-chevron-right ml-2"></i></a></div>
-                    </div>
-                </div>
-
             </div>
 
 
@@ -141,12 +184,11 @@
     </div>
 
 
-
     <!-- --------------------------------------------------------------------
     <-- Footer
     <-------------------------------------------------------------------- -->
+    
     <div class="load-html" id="footer" data-source="includes/footer.html"></div>
-
 
 
     <!-- --------------------------------------------------------------------
@@ -168,7 +210,7 @@
         ------------------------------------------------------------------- -->
         <li class="col-lg-3 col-sm-6 p-2" id="charadex-entries">
             <a class="card h-100 cardlink" href="">
-                <h5 class="card-header text-center design"></h5>
+                <h5 class="card-header text-center trait"></h5>
                 <div class="card-body d-flex flex-fill">
                     <img class="image img-fluid m-auto" src="" oncontextmenu="return false">
                 </div>
@@ -184,117 +226,51 @@
             <div class="card">
 
                 <!-- Header -->
-                <h2 class="card-header text-center p-4">
-                    <a class="cardlink design"></a> (<a class="cardlinkalt" href="">#<span class="id"></span></a>)
-                </h2>
+                <h2 class="card-header text-center p-4 trait"></h2>
 
 
                 <!--Main Info -->
-                <div class="px-md-5 pt-md-5 p-4">
-                    
-                    <!-- Character Info -->
-                    <div class="row no-gutters">
+                <div class="row no-gutters p-md-5 p-4">
 
 
-                        <!-- Image -->
-                        <div class="col-md-5 p-3">
-                            <div class="mx-auto w-100 text-center" oncontextmenu="return false">
-                                <img class="image img-fluid" src="">
-                            </div>
-                        </div>
-
-
-                        <!-- Information List -->
-                        <div class="col-md-7 p-3">
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Owner</b>
-                                <span class="owner"></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Artist</b>
-                                <span class="artist"></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Designer</b>
-                                <span class="designer"></span>
-                            </div>
-
-                            <hr>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Species</b>
-                                <span class="species"></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted"><span class="rarity">Rarity</span></b>
-                                <span class="rarity"></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Design Type</b>
-                                <span class="designtype"></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted"> <span class="value">Value</span></b>
-                                <span class="value">$<span class="value"></span></span>
-                            </div>
-
-                            <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Status</b>
-                                <span class="status"></span>
-                            </div>
-
-                            <hr>
-
-                            <!-- Item -->
-                            <div class="">
-                                <b class="text-muted">Traits</b>
-                                <div class="pl-3 text-pre traits"></div>
-                            </div>
-
-                            <hr>
-
-                            <!-- Item -->
-                            <div class="">
-                                <b class="text-muted">Notes</b>
-                                <div class="pl-3 text-pre notes"></div>
-                            </div>
-
-                            <hr>
-
-                            <!-- Item -->
-                            <div class="">
-                                <b class="text-muted">Transaction Log</b>
-                                <div class="pl-3 pt-2 small" id="log-table">
-                                    <div class="d-none">
-                                        <div class="row no-gutters" id="log-entry">
-                                            <div class="col-md-3"><span class="timestamp"></span></div>
-                                            <div class="col-md-9"><span class="reason"></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Add more list items above this line-->
+                    <!-- Image -->
+                    <div class="col-md-4 p-3">
+                        <div class="mx-auto w-100 text-center" oncontextmenu="return false">
+                            <img class="image img-fluid" src="">
                         </div>
                     </div>
 
-                    <!-- Where to Update -->
-                    <div class="card bg-faded py-2 px-3 mt-3 small text-center">
-                        <b>If you need to update this entry, please do so <a href="https://www.deviantart.com/tookiroshi/art/Help-Desk-and-Approvals-1173534964">here</a>.</b>
+
+                    <!-- Information List -->
+                    <div class="col-md-8 p-3">
+
+                        <!-- Item -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <b class="text-muted">Type</b>
+                            <span class="type"></span>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <b class="text-muted">Rarity</b>
+                            <span class="rarity"></span>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <b class="text-muted">Price</b>
+                            <span class="Price"></span>
+                        </div>
+
+                        <hr>
+
+                        <!-- Item -->
+                        <div class="">
+                            <b class="text-muted">Description</b>
+                            <div class="pl-4 text-pre description"></div>
+                        </div>
+
+                        <!-- Add more list items above this line-->
                     </div>
                 </div>
             </div>
@@ -302,6 +278,7 @@
 
 
     </div>
+
 
     <!-- ----------------------------------------------------------------- -->
     <!-- JS                                                                -->
@@ -319,7 +296,7 @@
     <!-- Charadex Script -->
     <script src="styles/config.js"></script>
     <script src="styles/charadex.js"></script>
-    <script>masterlist(options.masterlist);</script>
+    <script>charadexLarge(options.traits);</script>
 
 
 </body>
